@@ -15292,7 +15292,7 @@
 	      };
 
 	      _this.onTouchEnd = function (e) {
-            console.log("=========== onTouchEnd");
+            console.log("@@@ onTouchEnd");
 	        var touches = e.changedTouches;
 	        for (var i = 0, len = touches.length; i < len; i++) {
 	          var touch = touches[i];
@@ -15304,7 +15304,7 @@
             window.removeEventListener("touchcancel", _this.onTouchCancel, false);
 	      };
           _this.onTouchCancel = function (e) {
-            console.log("=========== onTouchCancel");
+            console.log("@@@ onTouchCancel");
             _this.onTouchEnd(e);
           };
 	      return _this;
@@ -15397,14 +15397,14 @@
 	    function PointerEventHandler(inputView) {
 	      var _this = _super.call(this, inputView) || this;
 	      _this.onPointerDown = function (e) {
-            console.log("++++++++++++++ onPointerDown");
+            console.log("+++ onPointerDown");
 	        _this.pointDown(e.pointerId, _this.getOffsetPositionFromInputView(e), _this.getPlatformButtonType(e, 0 /* PlatformButtonType.Primary */));
 	        var onPointerMove = function onPointerMove(event) {
 	          _this.pointMove(event.pointerId, _this.getOffsetPositionFromInputView(event), _this.getPlatformButtonType(event, -1 /* PlatformButtonType.Unchanged */));
 	        };
 
 	        var onPointerUp = function onPointerUp(event) {
-                console.log("++++++++++++++ onPointerUp");
+                console.log("+++ onPointerUp");
 	          _this.pointUp(event.pointerId, _this.getOffsetPositionFromInputView(event), _this.getPlatformButtonType(event, 0 /* PlatformButtonType.Primary */));
 	          if (e.pointerId === event.pointerId) {
 	            var handlers = _this._eventHandlersMap[event.pointerId];
@@ -15417,7 +15417,7 @@
 	          }
 	        };
             var onPointerCancel = function (event) {
-                console.log("++++++++++++++ onPointerCancel");
+                console.log("+++ onPointerCancel");
                 _this.pointUp(event.pointerId, _this.getOffsetPositionFromInputView(event), _this.getPlatformButtonType(event, 0 /* PlatformButtonType.Primary */));
             };
 
