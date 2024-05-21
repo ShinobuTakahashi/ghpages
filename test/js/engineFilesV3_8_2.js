@@ -15166,7 +15166,6 @@
 	      });
 	    };
 	    InputEventHandler.prototype.pointUp = function (identifier, pagePosition, button) {
-            console.log("+++ InputEventHandler pointUp");
 	      if (!this.pointerEventLock.hasOwnProperty(identifier + "")) {
 	        return;
 	      }
@@ -15418,7 +15417,8 @@
 	        };
             var onPointerCancel = function (event) {
                 console.log("+++ onPointerCancel");
-                _this.pointUp(event.pointerId, _this.getOffsetPositionFromInputView(event), _this.getPlatformButtonType(event, 0 /* PlatformButtonType.Primary */));
+                // _this.pointUp(event.pointerId, _this.getOffsetPositionFromInputView(event), _this.getPlatformButtonType(event, 0 /* PlatformButtonType.Primary */));
+                onPointerUp(event);
             };
 
 	        window.addEventListener("pointermove", onPointerMove, false);
