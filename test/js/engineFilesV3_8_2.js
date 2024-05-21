@@ -15166,7 +15166,7 @@
 	      });
 	    };
 	    InputEventHandler.prototype.pointUp = function (identifier, pagePosition, button) {
-            console.log("++++++++++++++ InputEventHandler pointUp");
+            console.log("+++ InputEventHandler pointUp");
 	      if (!this.pointerEventLock.hasOwnProperty(identifier + "")) {
 	        return;
 	      }
