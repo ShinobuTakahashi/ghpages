@@ -7,12 +7,12 @@
     <title>touchEvent test</title>
     <script>
         window.addEventListener("touchstart", (e) => {
-            // console.log("--- pointerdown");
+            console.log("--- touchstart");
             const eventType = document.getElementById("eventType");
             eventType.innerHTML = "eventType: touchstart";
         });
         window.addEventListener("touchend", (e)=> {
-            // console.log("--- pointerup");
+            console.log("--- touchend");
             const eventType = document.getElementById("eventType");
             eventType.innerHTML = "eventType: touchend";
         });
