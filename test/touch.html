@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>touchEvent test</title>
+    <script>
+        window.addEventListener("touchstart", (e) => {
+            // console.log("--- pointerdown");
+            const eventType = document.getElementById("eventType");
+            eventType.innerHTML = "eventType: touchstart";
+        });
+        window.addEventListener("touchend", (e)=> {
+            // console.log("--- pointerup");
+            const eventType = document.getElementById("eventType");
+            eventType.innerHTML = "eventType: touchend";
+        });
+        window.addEventListener("touchcancel", (e) => {
+            console.log("--- touchcancel");
+            const eventType = document.getElementById("eventType");
+            eventType.innerHTML = "eventType: touchcancel";
+        });
+    </script>
+</head>
+
+<body>
+    <div id="eventType">eventType:</div>
+    <div id="container">
+        <a href="https://akashic-games.github.io/" target="_blank">テストリンク</a>
+    </div>
+</body>
+</html>
