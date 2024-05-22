@@ -11,7 +11,7 @@
             const eventType = document.getElementById("eventType");
             eventType.innerHTML = "eventType: pointerDown";
         });
-        window.addEventListener("pointerup", (e)=> {
+        window.addEventListener("pointerup", (e) => {
             // console.log("--- pointerup");
             const eventType = document.getElementById("eventType");
             eventType.innerHTML = "eventType: pointerUp";
@@ -26,7 +26,7 @@
             const eventType = document.getElementById("eventType");
             eventType.innerHTML = "eventType: touchstart";
         });
-        window.addEventListener("touchend", (e)=> {
+        window.addEventListener("touchend", (e) => {
             // console.log("--- pointerup");
             const eventType = document.getElementById("eventType");
             eventType.innerHTML = "eventType: touchend";
@@ -37,12 +37,25 @@
             eventType.innerHTML = "eventType: touchcancel";
         });
     </script>
+
+    <style>
+        #rectangle {
+            width: 90%;
+            height: 100px;
+            /* background-color: aquamarine; */
+            border: 2px solid #000000;
+            border-width: 2px;
+            
+        }
+    </style>
+
 </head>
 
 <body>
     <div id="eventType">eventType:</div>
     <div id="container">
         <a href="https://akashic-games.github.io/" target="_blank">テストリンク</a>
+        <!-- <div id="rectangle"></div> -->
     </div>
 </body>
 </html>
