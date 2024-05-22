@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>canvas test</title>
+    <script>
+        function startup() {
+            const el = document.getElementsByTagName("canvas")[0];
+            el.addEventListener("pointerdown", (e) => console.log("--- pointDown"));
+            el.addEventListener("pointerup", (e) => console.log("--- pointerup"));
+            el.addEventListener("pointercancel", (e) => console.log("--- pointercancel"));
+            el.addEventListener("touchstart", (e) => console.log("+++ touchstart"));
+            el.addEventListener("touchend", (e) => console.log("+++ touchend"));
+            el.addEventListener("touchcancel", (e) => console.log("+++ touchcancel"));
+        }
+        window.onload = function () {
+            startup();
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="canvas" width="600" height="600" style="border:solid black 1px; touch-action:none">
+        お使いのブラウザーは canvas 要素に対応していません。
+    </canvas>
+    <br />
+    <pre id="log" style="border: 1px solid #ccc;"></pre>
+
+    <div id="container">
+        <a href="https://akashic-games.github.io/" target="_blank">canvas テストリンク</a>
+    </div>
+</body>
+
+</html>
