@@ -15272,6 +15272,7 @@
 	        window.removeEventListener("mouseup", _this.onWindowMouseUp, false);
 	      };
 	      _this.onTouchStart = function (e) {
+			console.log("@@@ onTouchStart");
 	        var touches = e.changedTouches;
 	        for (var i = 0, len = touches.length; i < len; i++) {
 	          var touch = touches[i];
