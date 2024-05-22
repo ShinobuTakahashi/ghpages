@@ -10,10 +10,10 @@
             const el = document.getElementsByTagName("canvas")[0];
             el.addEventListener("pointerdown", (e) => console.log("--- pointDown"));
             el.addEventListener("pointerup", (e) => console.log("--- pointerup"));
-            el.addEventListener("pointercancel", (e) => console.log("--- pointercancel"));
+            el.addEventListener("pointercancel", (e) => console.log("------ pointercancel"));
             el.addEventListener("touchstart", (e) => console.log("+++ touchstart"));
             el.addEventListener("touchend", (e) => console.log("+++ touchend"));
-            el.addEventListener("touchcancel", (e) => console.log("+++ touchcancel"));
+            el.addEventListener("touchcancel", (e) => console.log("++++++ touchcancel"));
         }
         window.onload = function () {
             startup();
